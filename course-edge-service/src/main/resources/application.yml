@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: course-edge-service
+
+dubbo:
+  application:
+    name: course-dubbo-consumer
+  registry:
+    address: zookeeper://192.168.174.136:2181
+  consumer:
+    timeout: 3000
+server:
+  port: 8081
+
+course:
+  service:
+    version: 1.0.0
