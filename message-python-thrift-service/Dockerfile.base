@@ -1,0 +1,4 @@
+FROM python:3.6
+MAINTAINER isacc codingdebugallday@163.com
+
+RUN pip install thrift

@@ -2,13 +2,15 @@ spring:
   application:
     name: course-dubbo-service
   datasource:
-      url: jdbc:mysql://192.168.174.136:3307/db_course?useUnicode=true&useSSL=false&characterEncoding=utf-8&allowMultiQueries=true
+#      url: jdbc:mysql://192.168.174.137:3307/db_course?useUnicode=true&useSSL=false&characterEncoding=utf-8&allowMultiQueries=true
+      url: jdbc:mysql://${mysql.address}:3307/db_course?useUnicode=true&useSSL=false&characterEncoding=utf-8&allowMultiQueries=true
       driver-class-name: com.mysql.jdbc.Driver
       username: root
       password: root
 thrift:
   user:
-    ip: 127.0.0.1
+#    ip: 127.0.0.1
+    ip: user-thrift-service
     port: 7911
 
 dubbo:
@@ -17,8 +19,9 @@ dubbo:
   protocol:
     name: dubbo
     port: 20880
-    host: 127.0.0.1
+#    host: 127.0.0.1
   registry:
-    address: zookeeper://192.168.174.136:2181
+#    address: zookeeper://192.168.174.137:2181
+    address: zookeeper://${zookeeper.addresss}}:2181
 server:
   port: 9090

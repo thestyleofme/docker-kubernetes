@@ -1,0 +1,12 @@
+server:
+  port: 80
+zuul:
+  routes:
+    course:
+      path: /course/**
+#      url: http://localhost:8081/course
+      url: http://course-edge-service:8081/course
+    user:
+      path: /user/**
+#      url: http://localhost:8082/user
+      url: http://user-edge-service:8082/user
