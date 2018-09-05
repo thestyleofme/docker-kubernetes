@@ -3,7 +3,7 @@ spring:
     name: user-edge-service
   redis:
 #    host: 192.168.174.137
-    host: ${redis.address}}
+    host: ${redis.address}
     port: 6380
     password: 123456
     database: 0

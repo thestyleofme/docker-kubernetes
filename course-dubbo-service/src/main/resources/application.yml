@@ -22,6 +22,6 @@ dubbo:
 #    host: 127.0.0.1
   registry:
 #    address: zookeeper://192.168.174.137:2181
-    address: zookeeper://${zookeeper.address}}:2181
+    address: zookeeper://${zookeeper.address}:2181
 server:
   port: 9090

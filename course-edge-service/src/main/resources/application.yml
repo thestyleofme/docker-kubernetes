@@ -7,7 +7,7 @@ dubbo:
     name: course-dubbo-consumer
   registry:
 #    address: zookeeper://192.168.174.137:2181
-    address: zookeeper://${zookeeper.address}}:2181
+    address: zookeeper://${zookeeper.address}:2181
   consumer:
     timeout: 3000
 server:
