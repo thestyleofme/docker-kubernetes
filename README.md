@@ -3,7 +3,7 @@
 ```docker
 docker pull openjdk:8-jdk-alpine
 docker run -it --entrypoint /bin/sh openjdk:8-jdk-alpine
-
+docker pull python:3.6
 
 docker build -t user-thrift-service:1.0 .
 docker run -it user-thrift-service:1.0 --mysql.address=192.168.174.137

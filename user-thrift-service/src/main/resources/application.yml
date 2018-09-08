@@ -2,8 +2,8 @@ spring:
   application:
     name: user-thrift-service
   datasource:
-#    url: jdbc:mysql://192.168.174.137:3307/db_user?useUnicode=true&useSSL=false&characterEncoding=utf-8&allowMultiQueries=true
-    url: jdbc:mysql://${mysql.address}/db_user?useUnicode=true&useSSL=false&characterEncoding=utf-8&allowMultiQueries=true
+    url: jdbc:mysql://192.168.174.137:3307/db_user?useUnicode=true&useSSL=false&characterEncoding=utf-8&allowMultiQueries=true
+#    url: jdbc:mysql://${mysql.address}/db_user?useUnicode=true&useSSL=false&characterEncoding=utf-8&allowMultiQueries=true
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root

@@ -13,5 +13,4 @@ public class CourseProviderApp {
                 .web(false) // 非 Web 应用
                 .run(args);
     }
-
 }

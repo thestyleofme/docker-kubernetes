@@ -2,8 +2,8 @@ spring:
   application:
     name: user-edge-service
   redis:
-#    host: 192.168.174.137
-    host: ${redis.address}
+    host: 192.168.174.137
+#    host: ${redis.address}
     port: 6380
     password: 123456
     database: 0
@@ -12,10 +12,10 @@ server:
   port: 8082
 thrift:
   user:
-#    ip: 127.0.0.1
-    ip: user-thrift-service
+    ip: 127.0.0.1
+#    ip: user-thrift-service
     port: 7911
   message:
-#    ip: 127.0.0.1
-    ip: message-python-thrift-service
+    ip: 127.0.0.1
+#    ip: message-python-thrift-service
     port: 9090

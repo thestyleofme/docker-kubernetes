@@ -66,10 +66,10 @@ public class UserController {
         try {
             if (StringUtils.isNotBlank(mobile)) {
                 result = serviceProvider.getMessageService().sendMobileMessage(mobile, message + code);
-                redisClient.set(mobile, code);
+                redisClient.set(mobile, code, 3600L);
             } else if (StringUtils.isNotBlank(email)) {
                 result = serviceProvider.getMessageService().sendEmailMessage(email, message + code);
-                redisClient.set(email, code);
+                redisClient.set(email, code, 3600L);
             } else {
                 return Response.MOBILE_OR_EMAIL_REQUIRED;
             }
