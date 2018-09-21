@@ -15,11 +15,11 @@ docker run -it message-python-thrift-service:1.0
 docker build -t user-edge-service:1.0 .
 docker run -it user-edge-service:1.0 --redis.address=192.168.174.137
 
-docker build -t course-dubbo-service.jar:1.0 .
-docker run -it course-dubbo-service.jar:1.0 --mysql.address=192.168.174.137 --zookeeper.address=192.168.174.137
+docker build -t course-dubbo-service:1.0 .
+docker run -it course-dubbo-service:1.0 --mysql.address=192.168.174.137 --zookeeper.address=192.168.174.137
 
-docker build -t course-edge-service.jar:1.0 .
-docker run -it course-dubbo-service.jar:1.0 --zookeeper.address=192.168.174.137
+docker build -t course-edge-service:1.0 .
+docker run -it course-dubbo-service:1.0 --zookeeper.address=192.168.174.137
 
 docker build -t api-gateway-zuul:1.0 .
 docker run -it api-gateway-zuul:1.0
