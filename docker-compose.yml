@@ -1,5 +1,4 @@
-version: '3'
-
+version: "3"
 services:
   message-service:
     image: message-python-thrift-service:1.0
@@ -7,7 +6,7 @@ services:
   user-thrift-service:
     image: user-thrift-service:1.0
     command:
-      - "--mysql.address=192.168.174.136"
+      - "--mysql.address=192.168.174.137"
 
   user-edge-service:
     image: user-edge-service:1.0
@@ -15,22 +14,22 @@ services:
       - message-service
       - user-thrift-service
     command:
-      - "--redis.address=192.168.174.136"
+      - "--redis.address=192.168.174.137"
 
   course-dubbo-service:
-      image: course-dubbo-service:1.0
-          links:
-            - user-thrift-service
-          command:
-            - "--mysql.address=192.168.174.136"
-            - "--zookeeper.address=192.168.174.136"
+    image: course-dubbo-service:1.0
+    links:
+      - user-thrift-service
+    command:
+      - "--mysql.address=192.168.174.137"
+#      - "--zookeeper.address=192.168.174.137"
 
   course-edge-service:
     image: course-edge-service:1.0
     links:
       - user-edge-service
-    command:
-      - "--zookeeper.address=192.168.174.136"
+#    command:
+#      - "--zookeeper.address=192.168.174.137"
 
   api-gateway-zuul:
     image: api-gateway-zuul:1.0
@@ -38,4 +37,4 @@ services:
       - user-edge-service
       - course-edge-service
     ports:
-      - 80:80
+      - "8080:8080"

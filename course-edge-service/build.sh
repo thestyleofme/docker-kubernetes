@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 mvn clean package
 
-docker build -t course-edge-service.jar:1.0 .
+docker build -t course-edge-service:1.0 .
